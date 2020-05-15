@@ -51,15 +51,35 @@ function generate_lookup_table() {
 }
 
 /**
+ * Call out to imagemagick to generate the montage
+ *
+ * @param Array $files List of files with filename
+ * @uses exec
+ */
+function montage( $files ) {
+	error_log( "Beginning montage..." );
+	$output = null;
+	$return_var = null;
+	$file_list = implode( $files, ' ' );
+
+	$command = sprintf(
+		'cd glyphs/; montage %1$s -geometry +0+0 -tile 9x ../tileset.png',
+		$file_list
+	);
+
+	exec( $command, $output, $return_var );
+
+	error_log( implode( $output, "\n" ) );
+	error_log( "montage return: " . (string) $return_var );
+	return $return_var;
+}
+
+/**
  * Load the files, generate the lists
  *
  * @return text of the character list
  */
-function main() {
-	$path = './glyphs/';
-	$files = scandir( $path );
-	$files = array_diff( $files, array( '.', '..' ) );
-
+function generate_list( $files ) {
 	$row = array();
 	$lookup_table = generate_lookup_table();
 
@@ -72,6 +92,9 @@ function main() {
 				$row = array();
 			}
 
+			/*
+			 * The bit where we generate the rows for the list
+			 */
 			$glyph_name = basename( $file, '.png' );
 			$uv = $lookup_table[$glyph_name];
 
@@ -89,6 +112,17 @@ function main() {
 	}
 
 	return ob_get_clean();
+}
+
+function main() {
+	$path = './glyphs/';
+
+	$files = scandir( $path );
+	$files = array_diff( $files, array( '.', '..' ) );
+
+	montage( $files );
+	$list = generate_list( $files );
+	echo $list;
 }
 
 echo main();
