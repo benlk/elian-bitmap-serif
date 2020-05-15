@@ -85,6 +85,9 @@ function generate_list( $files ) {
 
 	ob_start();
 
+	echo 'cut here:' . "\n";
+	echo '8<-------' . "\n";
+
 	try {
 		foreach ( $files as $file ) {
 			if ( count( $row ) === 9 ) {
@@ -98,12 +101,22 @@ function generate_list( $files ) {
 			$glyph_name = basename( $file, '.png' );
 			$uv = $lookup_table[$glyph_name];
 
-			// convert hex code to character:
-			// https://stackoverflow.com/a/6058533
-			$character = json_decode(sprintf(
-				'"\u%1$s"',
-				$uv
-			));
+			if ( empty( $uv ) ) {
+				// what if it's not in the lookup table?
+				error_log( sprintf(
+					'Error: no lookup table mapping for glyph "%1$s" file named %2$s',
+					$glyph_name,
+					$file
+				) );
+				$character = $glyph_name;
+			} else {
+				// convert hex code to character:
+				// https://stackoverflow.com/a/6058533
+				$character = json_decode(sprintf(
+					'"\u%1$s"',
+					$uv
+				));
+			}
 
 			$row[] = $character;
 		}
