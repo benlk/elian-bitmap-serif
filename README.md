@@ -18,6 +18,7 @@ Goals:
 - [ ] numbers
 - [ ] full punctuation (4px basis, hollow)
 - [ ] apply serifs
+- [ ] ampersand
 
 
 Thanks to the following sources:
