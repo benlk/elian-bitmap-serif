@@ -1,6 +1,10 @@
+![Elian Bitmap Serif](./samples/elian-bitmap-serif.png)
+
 # Elian Bitmap Serif
 
 This is a serif, bitmap font for the Elian script for English-like languages. It's licensed under the [SIL Open Font License 1.1](https://spdx.org/licenses/OFL-1.1.html), which affords you certain rights.
+
+
 
 ## Development notes
 
@@ -15,10 +19,16 @@ Goals:
 - [x] make sure mogrify and php have same sort order
 	- bash globbing goes a A b B comma c C d D
 	- php scandir goes A B C D a b c comma d
-- [ ] numbers
+- [x] numbers
+- [x] apply serifs
+- [x] ampersand
+- [ ] interpunct
+- [ ] cedilla
 - [ ] full punctuation (4px basis, hollow)
-- [ ] apply serifs
-- [ ] ampersand
+- [ ] cover full Windows-1252 plane, except:
+	- thorn
+	- German SS/ss
+	- eth
 
 
 Thanks to the following sources:
