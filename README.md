@@ -8,8 +8,6 @@ The font is made using [YellowAfterlife's Pixel Font Converter webapp](https://y
 
 This font is licensed under the [SIL Open Font License 1.1](https://spdx.org/licenses/OFL-1.1.html), which affords you certain rights.
 
-![A demonstration of the font, reading: This font is licensed under the SIL Open Font License 1.1, which affords you certain rights.](./samples/elian-SIL-text.png)
-
 # How to use this font
 
 **Desktop**: Download [Elian Bitmap Serif.ttf](./Elian Bitmap Serif.ttf) and install it on your computer using whatever means is appropriate for your program or operating system. Subscribe to this repo for updates.
