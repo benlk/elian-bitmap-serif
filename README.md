@@ -67,3 +67,5 @@ Thanks to the following sources:
 - https://silnrsi.github.io/FDBP/en-US/Characters_and_Glyphs.html
 - https://scriptsource.org/cms/scripts/page.php?item_id=entry_detail&uid=gg5wm9hhd3
 - https://github.com/adobe-type-tools/agl-aglfn/blob/master/aglfn.txt
+
+![A montage of all the characters in this font](./tileset.png)
