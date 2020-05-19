@@ -2,9 +2,31 @@
 
 # Elian Bitmap Serif
 
-This is a serif, bitmap font for the Elian script for English-like languages. It's licensed under the [SIL Open Font License 1.1](https://spdx.org/licenses/OFL-1.1.html), which affords you certain rights.
+This is a serif, bitmap font for the [Elian script](https://ccelian.com/ElianScriptFull.html), a pigpen-style cypher and calligraphic hand for English. You can see it live in use [on this demonstration webpage](https://benlk.github.io/elian-bitmap-serif/).
 
+This font is licensed under the [SIL Open Font License 1.1](https://spdx.org/licenses/OFL-1.1.html), which affords you certain rights.
 
+# How to use this font
+
+**Desktop**: Download [Elian Bitmap Serif.ttf](./Elian Bitmap Serif.ttf) and install it on your computer using whatever means is appropriate for your program or operating system. Subscribe to this repo for updates.
+
+**Web**: If you use git submodules or subtrees, include this repo in your repo for ease of updating it later. This project is still a work in progress. Then, use it in your project's CSS like so:
+
+```css
+@font-face {
+	font-family: "Elian Bitmap Serif";
+	src: url('./Elian Bitmap Serif.ttf')
+	;
+	font-weight: normal;
+}
+.ebs {
+	font-family: "Elian Bitmap Serif", sans-serif;
+}
+
+## How to contribute
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md)
+```
 
 ## Development notes
 
@@ -20,8 +42,12 @@ Goals:
 	- bash globbing goes a A b B comma c C d D
 	- php scandir goes A B C D a b c comma d
 - [x] numbers
-- [x] apply serifs
+- [x] apply serifs to uppercase
 - [x] ampersand
+- [x] Github repo
+- [ ] apply serifs to lowercase
+- [ ] accents/ligatures for lowercase
+- [ ] "
 - [ ] interpunct
 - [ ] cedilla
 - [ ] full punctuation (4px basis, hollow)
@@ -29,6 +55,7 @@ Goals:
 	- thorn
 	- German SS/ss
 	- eth
+	- fi/ffi and similar ligatures
 
 
 Thanks to the following sources:
