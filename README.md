@@ -45,7 +45,7 @@ Goals:
 - [x] apply serifs to uppercase
 - [x] ampersand
 - [x] Github repo
-- [ ] apply serifs to lowercase
+- [x] apply serifs to lowercase
 - [ ] accents/ligatures for lowercase
 - [ ] "
 - [ ] interpunct
