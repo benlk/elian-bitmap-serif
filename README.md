@@ -4,13 +4,17 @@
 
 This is a serif, bitmap font for the [Elian script](https://ccelian.com/ElianScriptFull.html), a pigpen-style cypher and calligraphic hand for English. You can see it live in use [on this demonstration webpage](https://benlk.github.io/elian-bitmap-serif/).
 
+The font is made using [YellowAfterlife's Pixel Font Converter webapp](https://yellowafterlife.itch.io/pixelfont), which converts [`tileset.png`](./tileset.png) and [`character-list.txt`](./character-list.txt) into a TrueType Font. `tileset.png` is made by combining all the images in [the `glyphs/` directory](./glyphs/), and `character-list.txt` is made by cross-referencing glyph filenames with the [Adobe Glyph List for New Fonts](https://github.com/adobe-type-tools/agl-aglfn).
+
 This font is licensed under the [SIL Open Font License 1.1](https://spdx.org/licenses/OFL-1.1.html), which affords you certain rights.
+
+![A demonstration of the font, reading: This font is licensed under the SIL Open Font License 1.1, which affords you certain rights.](./samples/elian-SIL-text.png)
 
 # How to use this font
 
 **Desktop**: Download [Elian Bitmap Serif.ttf](./Elian Bitmap Serif.ttf) and install it on your computer using whatever means is appropriate for your program or operating system. Subscribe to this repo for updates.
 
-**Web**: If you use git submodules or subtrees, include this repo in your repo for ease of updating it later. This project is still a work in progress. Then, use it in your project's CSS like so:
+**Web**: If you use git submodules or subtrees, you could include this repo in your repo for ease of updating it later. (Maybe you don't want to; it contains an Adobe repo as a submodule.) This project is still a work in progress. Then, use it in your project's CSS like so:
 
 ```css
 @font-face {
@@ -22,11 +26,13 @@ This font is licensed under the [SIL Open Font License 1.1](https://spdx.org/lic
 .ebs {
 	font-family: "Elian Bitmap Serif", sans-serif;
 }
+```
+
+To see the font in use, [see the demonstration page](https://benlk.github.io/elian-bitmap-serif/)!
 
 ## How to contribute
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md)
-```
 
 ## Development notes
 
