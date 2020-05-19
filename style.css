@@ -40,34 +40,13 @@
 .elian-grid span:nth-child(8) {grid-area: h}
 .elian-grid span:nth-child(9) {grid-area: i}
 
-p.duplicate-right {
-  margin-top: 0;
+.toggle-ebs:checked + .ebs {
+  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
 }
-.duplicate-right::before {
-  content: attr(content);
-
-  color: hsl( 220, 100%, 30% );
-
-  display: block;
-  float: left;
-  width: 50%;
-  user-select: all;
+input.toggle-ebs {
+  display: none;
 }
-.duplicate-right::after {
-  /* this way, it contains the content of the thing */
-  content: attr(content);
-
-  /* defined in index.html */
-  font-family: "Elian Bitmap Serif", sans-serif;
-
-  color: hsl( 0, 100%, 30% );
-
-  display: block;
-  float: left;
-  width: 50%;
-  box-sizing: border-box;
-  text-align: left;
-  user-select: all;
-
-  padding-left: .25rem;
+.toggle-ebs {
+  position: sticky;
+  top: 0;
 }
